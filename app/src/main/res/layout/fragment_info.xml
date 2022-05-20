@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.InfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lable_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:text="Справочник"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/formuls_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/style_button_oge"
+                android:fontFamily="@font/dela_gothic_one"
+                android:gravity="center"
+                android:text="Формулы"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/SquareX_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/style_button_ege"
+                android:fontFamily="@font/dela_gothic_one"
+                android:gravity="center"
+                android:onClick="btn_square_click"
+                android:text="Квадратные уравнения"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/trigonometricBase_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/style_button_oge"
+                android:fontFamily="@font/dela_gothic_one"
+                android:gravity="center"
+                android:text="Тригонометрическая основа"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/eometricBase_button2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/style_button_ege"
+                android:fontFamily="@font/dela_gothic_one"
+                android:gravity="center"
+                android:text="Геометрия"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

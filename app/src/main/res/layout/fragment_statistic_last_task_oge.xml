@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.Statistic_last_task_oge_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dela_gothic_one"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Тренировка окончена"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Правильных\nответов"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Неправильных\nответов"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/trueVotes_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingRight="70dp"
+                    android:text="0"
+                    android:textColor="@color/green_true"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/falseVotes_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center"
+                    android:paddingLeft="70dp"
+                    android:paddingTop="10dp"
+                    android:text="0"
+                    android:textColor="@color/red_false"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/uppingResult_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/dela_gothic_one"
+                android:gravity="center"
+                android:text="Вы улучшили свой результат, по сравнению с предыдущим на 0%"
+                android:textColor="@color/green_true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/button_back_statistic_oge"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_button_oge"
+        android:fontFamily="@font/dela_gothic_one"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="В МЕНЮ"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+</FrameLayout>

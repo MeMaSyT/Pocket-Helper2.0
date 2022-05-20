@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="imageHome">Home</string>
+    <string name="todo">TODO</string>
+    <string name="main_hello">Добро пожаловать в приложение "КАРМАННЫЙ ТРЕНЕР". В нем ты можешь подтянуть свои знания в математике и потренироваться решать некоторые экзамены</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="need_class_exam">Класс:</string>
+    <string name="need_time_exam">Требуется времени:</string>
+    <string name="exam_text_title">О экзамене:</string>
+    <string name="exam_vote_text">Выберите задание</string>
+    <string name="go_back">НАЗАД</string>
+    <string name="square_uravneniya_text">Квадратные уравнения - это уравнения типа: ax^2 + bx + c = 0\n\n ЭТАПЫ РЕШЕНИЯ:\n 1) Найти дискриминант D = b^2 - 4ac\n2) Определить D &amp; 0, D &gt; 0 или D = 0\n       Если D &amp; 0, то будет 2 корня\n       Если D &gt; 0, то корней нет\n       Если D = 0, то будет 1 корень\n3) Если 2 корня, то\n х = (-b +- D^0.5)/2a\n если 1 корень, то\n x= -b/2a</string>
+
+</resources>
