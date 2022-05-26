@@ -34,6 +34,7 @@
                 android:background="@drawable/style_button_oge"
                 android:fontFamily="@font/dela_gothic_one"
                 android:gravity="center"
+                android:onClick="btn_formulas_click"
                 android:text="Формулы"
                 android:textColor="@color/black"
                 android:textSize="34sp" />
@@ -75,6 +76,20 @@
                 android:textColor="@color/black"
                 android:textSize="34sp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/button_to_statistic"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/style_button_oge"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="статистика"
+            android:textColor="@color/black"
+            android:textSize="34sp" />
 
     </LinearLayout>
 

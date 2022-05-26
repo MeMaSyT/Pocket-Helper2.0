@@ -313,6 +313,7 @@
                         android:id="@+id/line5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <TextView
@@ -320,7 +321,6 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
                             android:background="@drawable/style_button_oge"
                             android:fontFamily="@font/dela_gothic_one"
                             android:gravity="center"
@@ -334,7 +334,6 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
                             android:background="@drawable/style_button_oge"
                             android:fontFamily="@font/dela_gothic_one"
                             android:gravity="center"
@@ -348,26 +347,11 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_margin="5dp"
-                            android:layout_weight="1"
                             android:background="@drawable/style_button_oge"
                             android:fontFamily="@font/dela_gothic_one"
                             android:gravity="center"
                             android:onClick="buttonClick"
                             android:text="19"
-                            android:textColor="@color/black"
-                            android:textSize="34sp" />
-
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_margin="5dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/style_button_oge"
-                            android:fontFamily="@font/dela_gothic_one"
-                            android:gravity="center"
-                            android:onClick="buttonClick"
-                            android:text="20"
                             android:textColor="@color/black"
                             android:textSize="34sp" />
 
@@ -391,7 +375,7 @@
                     android:background="@drawable/style_button_oge"
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center"
-                    android:onClick="goBack"
+                    android:onClick="goGlobalQuest"
                     android:text="ТЕСТ"
                     android:textColor="@color/black"
                     android:textSize="34sp" />

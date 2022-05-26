@@ -2,7 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="imageHome">Home</string>
     <string name="todo">TODO</string>
-    <string name="main_hello">Добро пожаловать в приложение "КАРМАННЫЙ ТРЕНЕР". В нем ты можешь подтянуть свои знания в математике и потренироваться решать некоторые экзамены</string>
+    <string name="main_hello">Добро пожаловать в приложение\n"КАРМАННЫЙ ТРЕНЕР".\nВ нем ты можешь подтянуть свои знания в математике и потренироваться решать некоторые экзамены. \nДля решения некоторых задач вам понадобится черновик для решения</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="need_class_exam">Класс:</string>
     <string name="need_time_exam">Требуется времени:</string>

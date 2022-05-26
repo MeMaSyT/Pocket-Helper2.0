@@ -34,19 +34,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/button_to_statistic"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@drawable/style_button_oge"
-            android:fontFamily="@font/dela_gothic_one"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="статистика"
-            android:textColor="@color/black"
-            android:textSize="34sp" />
     </LinearLayout>
 
 </FrameLayout>
