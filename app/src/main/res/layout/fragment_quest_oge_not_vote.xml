@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.QuestFragment_oge_notVote" >
+
+    <ImageButton
+        android:id="@+id/buttonBack_toLevels2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|top"
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_revert"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lable_oge_non_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="LABEL"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_oge_non_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="text"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/voteText_nonVote_oge"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:hint="ответ"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:scrollbarSize="4dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/button_isTrueVote2"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/style_button_ege"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Проверить"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/level_complite_quest_oge_nonVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:translationY="260dp">
+
+        <ImageView
+            android:id="@+id/level_complite_quest_oge_nonVote_image"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_truevoteimage" />
+
+        <TextView
+            android:id="@+id/trueVote_text_oge_nonVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:text="1 / 10"
+            android:textSize="34sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/level_failed_quest_oge_nonVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:translationY="260dp">
+
+        <ImageView
+            android:id="@+id/level_failed_quest_oge_nonVote_image"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_falsevoteimage" />
+
+        <TextView
+            android:id="@+id/falseVote_text_oge_nonVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:text="1 / 10"
+            android:textSize="34sp" />
+    </FrameLayout>
+</FrameLayout>
