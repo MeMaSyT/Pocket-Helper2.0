@@ -42,11 +42,28 @@
             android:text="text"
             android:textSize="20sp" />
 
+        <LinearLayout
+            android:id="@+id/quest_nonVote_oge_image_book"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/image_book"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_task17_1_oge" />
+        </LinearLayout>
+
         <EditText
             android:id="@+id/voteText_nonVote_oge"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:fontFamily="@font/dela_gothic_one"
             android:gravity="center"
             android:hint="ответ"

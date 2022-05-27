@@ -148,9 +148,9 @@ public class QuestFragment_oge extends Fragment {
                 handler.removeCallbacksAndMessages(null);
                 set.cancel();
                 set1.cancel();
-                Tasks_OGE_Activity.onGame = false;
-                FragmentManager fm = getActivity().getSupportFragmentManager();
-                fm.popBackStack();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .remove(getActivity().getSupportFragmentManager().findFragmentByTag("oge_task_vote"))
+                        .commit();
                 Tasks_OGE_Activity.levels_layout.setVisibility(View.VISIBLE);
             }
         });
@@ -246,11 +246,13 @@ public class QuestFragment_oge extends Fragment {
                 set.setTarget(trueVote_image);
                 set.start();
                 trueTextVote.setText(data_id + " / 19");
+                Tasks_OGE_Activity.yourAnswers += "1";
             } else {
                 set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
                 set.setTarget(falseVote_image);
                 set.start();
                 falseTextVote.setText(data_id + " / 19");
+                Tasks_OGE_Activity.yourAnswers += "0";
             }
 
             MainStatistic.plussedInt(MainStatistic.APP_STATISTIC_LEVELS_PLAYED, 1);

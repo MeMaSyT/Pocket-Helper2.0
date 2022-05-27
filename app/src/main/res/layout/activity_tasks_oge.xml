@@ -375,7 +375,7 @@
                     android:background="@drawable/style_button_oge"
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center"
-                    android:onClick="goGlobalQuest"
+                    android:onClick="globalQuest_btn_click"
                     android:text="ТЕСТ"
                     android:textColor="@color/black"
                     android:textSize="34sp" />

@@ -29,6 +29,9 @@ import com.example.pocketHelper.statistic.MainStatistic;
 import java.io.IOException;
 
 public class QuestFragment_oge_moreVotes extends Fragment {
+    public interface GlobalQuest_completeTaskListener {
+        public void onTaskReady(String title);
+    }
     private View trueVote_image, falseVote_image;
     private TextView labelView, textView, proverkaButton;
     private CheckBox vote1_btn, vote2_btn, vote3_btn;
@@ -38,6 +41,7 @@ public class QuestFragment_oge_moreVotes extends Fragment {
     String label, text, vote1, vote2, vote3;
 
     private int[] intent;
+    private int intent_forTest;
     private int i_intent = 0;
 
     private DBHelper db_helper;
@@ -57,9 +61,24 @@ public class QuestFragment_oge_moreVotes extends Fragment {
 
     Handler handler = new Handler();
 
+    //globalQuest
+    private boolean isGlobalQuest = false;
+    private QuestFragment_oge_notVote.GlobalQuest_completeTaskListener listener;
+
     public QuestFragment_oge_moreVotes(int[] intent, int data_id) {
         this.intent = intent;
         this.data_id = data_id;
+    }
+
+    public void setListener(QuestFragment_oge_notVote.GlobalQuest_completeTaskListener listener) {
+        this.listener = listener;
+    }
+
+    public QuestFragment_oge_moreVotes(int intent, int data_id) {
+        this.intent_forTest = intent;
+        this.data_id = data_id;
+        isGlobalQuest = true;
+        this.listener = null;
     }
 
     @Override
@@ -98,7 +117,11 @@ public class QuestFragment_oge_moreVotes extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         cursor_label.moveToFirst();
+        if (!isGlobalQuest) {
         cursor_label.move(intent[i_intent]);
+        } else {
+            cursor_label.move(intent_forTest);
+        }
 
         label = cursor_label.getString(2);
         text = cursor_label.getString(3);
@@ -128,9 +151,9 @@ public class QuestFragment_oge_moreVotes extends Fragment {
                 handler.removeCallbacksAndMessages(null);
                 set.cancel();
                 set1.cancel();
-                Tasks_OGE_Activity.onGame = false;
-                FragmentManager fm = getActivity().getSupportFragmentManager();
-                fm.popBackStack();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .remove(getActivity().getSupportFragmentManager().findFragmentByTag("oge_task_vote_more"))
+                        .commit();
                 Tasks_OGE_Activity.levels_layout.setVisibility(View.VISIBLE);
             }
         });
@@ -161,66 +184,94 @@ public class QuestFragment_oge_moreVotes extends Fragment {
         if(vote3_btn.isChecked()){
             answer += "3";
         }
-        if (!answer.equals("") && trueVote == Integer.parseInt(answer)) {
-            trueVote_image.setVisibility(View.VISIBLE);
-            trueVotes++;
-            set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
-            set.setTarget(trueVote_image);
-            set.start();
-            trueTextVote.setText((i_intent + 1) + " / 10");
-        } else {
-            falseVote_image.setVisibility(View.VISIBLE);
-            set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
-            set.setTarget(falseVote_image);
-            set.start();
-            falseTextVote.setText((i_intent + 1) + " / 10");
-        }
-
-        MainStatistic.plussedInt(MainStatistic.APP_STATISTIC_LEVELS_PLAYED, 1);
-
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                i_intent++;
-                if (i_intent >= 10) {
-                    Statistic_last_task_oge_Fragment fragmentStatistic = new Statistic_last_task_oge_Fragment(trueVotes, data_id);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragmentContainerView, fragmentStatistic, "statistic_oge")
-                            .addToBackStack(null)
-                            .commit();
-                } else {
-                    Cursor cursor_restarted = db.rawQuery("SELECT * FROM asks_tab WHERE numberTask = " + data_id, null);
-                    cursor_restarted.moveToFirst();
-                    cursor_restarted.moveToPosition(intent[i_intent]);
-
-                    label = cursor_restarted.getString(2);
-                    text = cursor_restarted.getString(3);
-                    vote1 = cursor_restarted.getString(4);
-                    vote2 = cursor_restarted.getString(5);
-                    vote3 = cursor_restarted.getString(6);
-                    trueVote = cursor_restarted.getInt(8);
-
-                    cursor_restarted.close();
-
-                    LoadDataLevel(label, text, vote1, vote2, vote3, trueVote);
-
-                    vote1_btn.setClickable(true);
-                    vote2_btn.setClickable(true);
-                    vote3_btn.setClickable(true);
-
-                    vote1_btn.setChecked(false);
-                    vote2_btn.setChecked(false);
-                    vote3_btn.setChecked(false);
-
-                    set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.back_vote_anim);
-                    set.setTarget(falseVote_image);
-                    set.start();
-                    set1 = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.back_vote_anim);
-                    set1.setTarget(trueVote_image);
-                    set1.start();
-                }
+        if (!isGlobalQuest) {
+            if (!answer.equals("") && trueVote == Integer.parseInt(answer)) {
+                trueVote_image.setVisibility(View.VISIBLE);
+                trueVotes++;
+                set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
+                set.setTarget(trueVote_image);
+                set.start();
+                trueTextVote.setText((i_intent + 1) + " / 10");
+            } else {
+                falseVote_image.setVisibility(View.VISIBLE);
+                set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
+                set.setTarget(falseVote_image);
+                set.start();
+                falseTextVote.setText((i_intent + 1) + " / 10");
             }
 
-        }, 2000);
+            MainStatistic.plussedInt(MainStatistic.APP_STATISTIC_LEVELS_PLAYED, 1);
+
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    i_intent++;
+                    if (i_intent >= 10) {
+                        Statistic_last_task_oge_Fragment fragmentStatistic = new Statistic_last_task_oge_Fragment(trueVotes, data_id);
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragmentContainerView, fragmentStatistic, "statistic_oge")
+                                .addToBackStack(null)
+                                .commit();
+                    } else {
+                        Cursor cursor_restarted = db.rawQuery("SELECT * FROM asks_tab WHERE numberTask = " + data_id, null);
+                        cursor_restarted.moveToFirst();
+                        cursor_restarted.moveToPosition(intent[i_intent]);
+
+                        label = cursor_restarted.getString(2);
+                        text = cursor_restarted.getString(3);
+                        vote1 = cursor_restarted.getString(4);
+                        vote2 = cursor_restarted.getString(5);
+                        vote3 = cursor_restarted.getString(6);
+                        trueVote = cursor_restarted.getInt(8);
+
+                        cursor_restarted.close();
+
+                        LoadDataLevel(label, text, vote1, vote2, vote3, trueVote);
+
+                        vote1_btn.setClickable(true);
+                        vote2_btn.setClickable(true);
+                        vote3_btn.setClickable(true);
+
+                        vote1_btn.setChecked(false);
+                        vote2_btn.setChecked(false);
+                        vote3_btn.setChecked(false);
+
+                        set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.back_vote_anim);
+                        set.setTarget(falseVote_image);
+                        set.start();
+                        set1 = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.back_vote_anim);
+                        set1.setTarget(trueVote_image);
+                        set1.start();
+                    }
+                }
+
+            }, 2000);
+        }else{
+            if (!answer.equals("") && trueVote == Integer.parseInt(answer)) {
+                trueVote_image.setVisibility(View.VISIBLE);
+                trueVotes++;
+                set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
+                set.setTarget(trueVote_image);
+                set.start();
+                trueTextVote.setText(data_id + " / 19");
+                Tasks_OGE_Activity.yourAnswers += "1";
+            } else {
+                falseVote_image.setVisibility(View.VISIBLE);
+                set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
+                set.setTarget(falseVote_image);
+                set.start();
+                falseTextVote.setText(data_id + " / 19");
+                Tasks_OGE_Activity.yourAnswers += "0";
+            }
+
+            MainStatistic.plussedInt(MainStatistic.APP_STATISTIC_LEVELS_PLAYED, 1);
+
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    listener.onTaskReady("complete");
+                }
+            }, 2000);
+        }
     }
 }

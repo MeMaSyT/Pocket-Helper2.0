@@ -21,12 +21,13 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.pocketHelper.R;
 import com.example.pocketHelper.Tasks_OGE_Activity;
 import com.example.pocketHelper.db.DBHelper;
-import com.example.pocketHelper.listeners.GlobalQuest_completeTaskListener;
 import com.example.pocketHelper.statistic.MainStatistic;
 
 import java.io.IOException;
@@ -38,6 +39,8 @@ public class QuestFragment_oge_notVote extends Fragment {
 
     private TextView labelView, textView, proverkaButton;
     private EditText voteText;
+    private LinearLayout imageBook;
+    ImageView image;
     private float trueVote = -1;
     private int data_id;
 
@@ -129,6 +132,22 @@ public class QuestFragment_oge_notVote extends Fragment {
         text = cursor_label.getString(3);
         trueVote = cursor_label.getFloat(8);
 
+        imageBook = view.findViewById(R.id.quest_nonVote_oge_image_book);
+        image = view.findViewById(R.id.image_book);
+        float factor = getContext().getResources().getDisplayMetrics().density;
+        if (!cursor_label.getString(4).equals("-")) {
+            int id = getResources().getIdentifier(cursor_label.getString(4), "drawable", getActivity().getPackageName());
+            image.setImageResource(id);
+            ViewGroup.LayoutParams params = imageBook.getLayoutParams();
+            params.height = (int) (180 * factor);
+            imageBook.setLayoutParams(params);
+            imageBook.setVisibility(View.VISIBLE);
+        } else {
+            System.out.println("ok");
+            imageBook.removeView(imageBook);
+        }
+
+
         cursor_label.close();
 
         back_btn = view.findViewById(R.id.buttonBack_toLevels2);
@@ -140,6 +159,7 @@ public class QuestFragment_oge_notVote extends Fragment {
         falseTextVote = view.findViewById(R.id.falseVote_text_oge_nonVote);
         trueTextVote = view.findViewById(R.id.trueVote_text_oge_nonVote);
         voteText = view.findViewById(R.id.voteText_nonVote_oge);
+
         LoadDataLevel(label, text);
 
         back_btn.setOnClickListener(new View.OnClickListener() {
@@ -148,9 +168,9 @@ public class QuestFragment_oge_notVote extends Fragment {
                 handler.removeCallbacksAndMessages(null);
                 set.cancel();
                 set1.cancel();
-                Tasks_OGE_Activity.onGame = false;
-                FragmentManager fm = getActivity().getSupportFragmentManager();
-                fm.popBackStack();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .remove(getActivity().getSupportFragmentManager().findFragmentByTag("oge_task_vote_nonVote"))
+                        .commit();
                 Tasks_OGE_Activity.levels_layout.setVisibility(View.VISIBLE);
             }
         });
@@ -182,7 +202,7 @@ public class QuestFragment_oge_notVote extends Fragment {
                     set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
                     set.setTarget(isTrueVoteImage);
                     set.start();
-                    if (data_id > 5) {
+                    if (data_id > 5 && data_id != 17 && data_id != 18) {
                         trueTextVote.setText((i_intent + 1) + " / 10");
                     } else {
                         trueTextVote.setText((i_intent + 1) + " / 5");
@@ -191,7 +211,7 @@ public class QuestFragment_oge_notVote extends Fragment {
                     set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
                     set.setTarget(falseVoteImage);
                     set.start();
-                    if (data_id > 5) {
+                    if (data_id > 5 && data_id != 17 && data_id != 18) {
                         falseTextVote.setText((i_intent + 1) + " / 10");
                     } else {
                         falseTextVote.setText((i_intent + 1) + " / 5");
@@ -216,6 +236,9 @@ public class QuestFragment_oge_notVote extends Fragment {
                             label = cursor_restarted.getString(2);
                             text = cursor_restarted.getString(3);
                             trueVote = cursor_restarted.getFloat(8);
+
+                            int id = getResources().getIdentifier(cursor_restarted.getString(4), "drawable", getActivity().getPackageName());
+                            image.setImageResource(id);
 
                             cursor_restarted.close();
 
@@ -246,11 +269,13 @@ public class QuestFragment_oge_notVote extends Fragment {
                     set.setTarget(isTrueVoteImage);
                     set.start();
                     trueTextVote.setText(data_id + " / 19");
+                    Tasks_OGE_Activity.yourAnswers += "1";
                 } else {
                     set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.vote_anim);
                     set.setTarget(falseVoteImage);
                     set.start();
                     falseTextVote.setText(data_id + " / 19");
+                    Tasks_OGE_Activity.yourAnswers += "0";
                 }
                 handler.postDelayed(new Runnable() {
                     @Override

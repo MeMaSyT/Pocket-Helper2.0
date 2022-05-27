@@ -51,7 +51,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="207dp"
+                android:layout_height="185dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
@@ -70,7 +70,7 @@
                     android:onClick="buttonVoteClick"
                     android:text="1"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/button_vote2"
@@ -85,13 +85,13 @@
                     android:onClick="buttonVoteClick"
                     android:text="1"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="207dp"
+                android:layout_height="185dp"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp">
@@ -109,7 +109,7 @@
                     android:onClick="buttonVoteClick"
                     android:text="1"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/button_vote4"
@@ -124,7 +124,7 @@
                     android:onClick="buttonVoteClick"
                     android:text="1"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
         </LinearLayout>

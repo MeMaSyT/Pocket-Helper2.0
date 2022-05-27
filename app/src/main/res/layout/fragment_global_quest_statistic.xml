@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.GlobalQuestStatisticFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_global_quest_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:text="Экзамен окончен"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="1"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="2"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="3"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="4"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="5"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="6"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="7"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num7"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="8"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num8"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="9"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num9"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num10"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="10"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num11"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="11"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num12"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="12"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num12"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num13"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="13"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num13"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num14"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="14"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num14"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num15"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="15"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num15"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num16"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="16"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num16"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num17"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="17"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num17"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num18"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="18"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num18"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/global_quest_stats_num19"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_num19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dela_gothic_one"
+                    android:gravity="center_horizontal"
+                    android:text="19"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/image_num19"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_button_vpr" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/trueAnswers_stats_oge_global"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:paddingTop="20dp"
+            android:text="Правельных ответов: 19"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/falseAnswers_stats_oge_global"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:text="Неравельных ответов: 19"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/button_back_statistic_global_oge"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/style_button_oge"
+        android:fontFamily="@font/dela_gothic_one"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="В МЕНЮ"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
+</FrameLayout>

@@ -30,7 +30,7 @@ public class Statistic_last_task_oge_Fragment extends Fragment {
 
     Statistic_last_task_oge_Fragment(int trueVotes, int id_Task) {
         this.trueVotes = trueVotes;
-        if(id_Task > 5) {
+        if(id_Task > 5 && id_Task != 17 && id_Task != 18) {
             falseVotes = 10 - trueVotes;
         }else {
             falseVotes = 5 - trueVotes;

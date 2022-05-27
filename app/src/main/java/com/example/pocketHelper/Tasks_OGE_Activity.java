@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.pocketHelper.db.DBHelper;
+import com.example.pocketHelper.fragments.GlobalQuestStatisticFragment;
 import com.example.pocketHelper.fragments.QuestFragment_oge;
 import com.example.pocketHelper.fragments.QuestFragment_oge_line;
 import com.example.pocketHelper.fragments.QuestFragment_oge_moreVotes;
@@ -38,6 +39,7 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
     //globalQuest
     int numberQuest_inTask = 1;
     int[] intent;
+    public static String yourAnswers;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -84,8 +86,8 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                     questFragment_oge = new QuestFragment_oge(generateIntent(10), data_id);
                 }
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge);
-                ft.addToBackStack("oge_task_vote");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge, "oge_task_vote");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
             case 2:
@@ -98,8 +100,8 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                     questFragment_oge_line = new QuestFragment_oge_line(generateIntent(10), data_id);
                 }
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge_line);
-                ft.addToBackStack("oge_task_vote_line");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge_line, "oge_task_vote_line");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
             case 3:
@@ -107,7 +109,7 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                 levels_layout = findViewById(R.id.container1);
                 levels_layout.setVisibility(View.INVISIBLE);
                 QuestFragment_oge_notVote questFragment_oge_nonVote = null;
-                if (data_id > 5) {
+                if (data_id > 5 && data_id != 17 && data_id != 18) {
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                         questFragment_oge_nonVote = new QuestFragment_oge_notVote(generateIntent(10), data_id);
                     }
@@ -116,8 +118,8 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                         questFragment_oge_nonVote = new QuestFragment_oge_notVote(generateIntent(5), data_id);
                     }
                 }
-                ft.replace(R.id.fragmentContainerView, questFragment_oge_nonVote);
-                ft.addToBackStack("oge_task_vote_line");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge_nonVote, "oge_task_vote_nonVote");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
             case 4:
@@ -130,8 +132,8 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                     questFragment_oge_more_votes = new QuestFragment_oge_moreVotes(generateIntent(10), data_id);
                 }
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge_more_votes);
-                ft.addToBackStack("oge_task_vote_more");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge_more_votes,"oge_task_vote_more");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
         }
@@ -160,12 +162,12 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                     @Override
                     public void onTaskReady(String title) {
                         numberQuest_inTask++;
-                        goGlobalQuest(new View(Tasks_OGE_Activity.this));
+                        goGlobalQuest();
                     }
                 });
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge);
-                ft.addToBackStack("oge_task_vote");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge, "oge_task_vote");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
             case 2:
@@ -182,12 +184,12 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                     @Override
                     public void onTaskReady(String title) {
                         numberQuest_inTask++;
-                        goGlobalQuest(new View(Tasks_OGE_Activity.this));
+                        goGlobalQuest();
                     }
                 });
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge_line);
-                ft.addToBackStack("oge_task_vote_line");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge_line, "oge_task_vote_line");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
             case 3:
@@ -204,12 +206,12 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
                     @Override
                     public void onTaskReady(String title) {
                         numberQuest_inTask++;
-                        goGlobalQuest(new View(Tasks_OGE_Activity.this));
+                        goGlobalQuest();
                     }
                 });
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge_nonVote);
-                ft.addToBackStack("oge_task_vote_line");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge_nonVote, "oge_task_vote_nonVote");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
             case 4:
@@ -219,11 +221,19 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
 
                 QuestFragment_oge_moreVotes questFragment_oge_more_votes = null;
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                    questFragment_oge_more_votes = new QuestFragment_oge_moreVotes(generateIntent(10), data_id);
+                    questFragment_oge_more_votes = new QuestFragment_oge_moreVotes(intent_i, data_id);
                 }
+                questFragment_oge_more_votes.setListener(new QuestFragment_oge_notVote.GlobalQuest_completeTaskListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.N)
+                    @Override
+                    public void onTaskReady(String title) {
+                        numberQuest_inTask++;
+                        goGlobalQuest();
+                    }
+                });
 
-                ft.replace(R.id.fragmentContainerView, questFragment_oge_more_votes);
-                ft.addToBackStack("oge_task_vote_more");
+                ft.replace(R.id.fragmentContainerView, questFragment_oge_more_votes,"oge_task_vote_more");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
         }
@@ -237,10 +247,22 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void goGlobalQuest(View v) {
-        buttonClick(numberQuest_inTask, intent[numberQuest_inTask - 1]);
+    public void goGlobalQuest() {
+        if(numberQuest_inTask <= 19) {
+            buttonClick(numberQuest_inTask, intent[numberQuest_inTask - 1]);
+        }else {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragmentContainerView, new GlobalQuestStatisticFragment(yourAnswers))
+                    .addToBackStack("statsGlobalOge")
+                    .commit();
+        }
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void globalQuest_btn_click(View view){
+        yourAnswers = "";
+        goGlobalQuest();
+    }
     @RequiresApi(api = Build.VERSION_CODES.N)
     private int[] generateIntent(int N) {
         ArrayList<Integer> arrayList = new ArrayList<>(N);
@@ -260,7 +282,7 @@ public class Tasks_OGE_Activity extends AppCompatActivity{
         ArrayList<Integer> arrayList = new ArrayList<>(19);
         Random random = new Random();
         for (int i = 0; i < 19; i++) {
-            if (i < 5) {
+            if (i < 5 || i == 16 || i == 17) {
                 arrayList.add(random.nextInt(5));
             } else {
                 arrayList.add(random.nextInt(10));
