@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.memasyt.pocketHelper.fragments.info.GeometryInfoFragment">
+
+    <TextView
+        android:id="@+id/label_geometryBase6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/dela_gothic_one"
+        android:gravity="left"
+        android:text="S ромба = 0.5*d1*d2"
+        android:textColor="#D755452A"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back_geometryBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="center"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@android:drawable/ic_menu_revert"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/label_geometryBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:text="Геометрия"
+            android:textColor="#D755452A"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/label_geometryBase2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="left"
+            android:text="Окружность:\nl = 2πR\nS = πR²"
+            android:textColor="#D755452A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_geometryBase3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="left"
+            android:text="S параллелограмма = ah"
+            android:textColor="#D755452A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_geometryBase4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="left"
+            android:text="S треугольника = 0.5ah"
+            android:textColor="#D755452A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_geometryBase5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="left"
+            android:text="S трапеции = 0.5(a + b)*h"
+            android:textColor="#D755452A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_geometryBase7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="left"
+            android:text="S ромба = 0.5*(d1*d2)"
+            android:textColor="#D755452A"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</FrameLayout>

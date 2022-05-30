@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".fragments.StatisticFragment" >
+    tools:context="com.memasyt.pocketHelper.fragments.StatisticFragment" >
 
     <ImageButton
         android:id="@+id/buttonBack_inStats"
@@ -30,6 +30,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="СТАТИСТИКА"
+            android:textColor="#D755452A"
             android:textSize="20sp" />
 
         <TextView
@@ -40,6 +41,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="ответы"
+            android:textColor="#D755452A"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -71,7 +73,8 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/dela_gothic_one"
                         android:gravity="center_vertical"
-                        android:text="правильные" />
+                        android:text="правильные"
+                        android:textColor="#D755452A" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -93,7 +96,8 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/dela_gothic_one"
                         android:gravity="center_vertical"
-                        android:text="неправильные" />
+                        android:text="неправильные"
+                        android:textColor="#D755452A" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -116,6 +120,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="другое"
+            android:textColor="#D755452A"
             android:textSize="18sp" />
 
         <TextView
@@ -125,6 +130,7 @@
             android:fontFamily="@font/dela_gothic_one"
             android:padding="10dp"
             android:text="Решено примеров: 0"
+            android:textColor="#D755452A"
             android:textSize="18sp" />
 
         <TextView
@@ -134,7 +140,8 @@
             android:fontFamily="@font/dela_gothic_one"
             android:padding="10dp"
             android:text="Любимое задание огэ: -"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/imageView"

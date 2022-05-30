@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Карманный тренер</string>
     <string name="imageHome">Home</string>
     <string name="todo">TODO</string>
     <string name="main_hello">Добро пожаловать в приложение\n"КАРМАННЫЙ ТРЕНЕР".\nВ нем ты можешь подтянуть свои знания в математике и потренироваться решать некоторые экзамены. \nДля решения некоторых задач вам понадобится черновик для решения</string>

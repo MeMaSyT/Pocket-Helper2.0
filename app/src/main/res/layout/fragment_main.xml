@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".fragments.MainFragment" >
+    tools:context="com.memasyt.pocketHelper.fragments.MainFragment" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="@string/main_hello"
-            android:textColor="@color/black"
+            android:textColor="#D755452A"
             android:textSize="20sp"
             android:textStyle="bold" />
 

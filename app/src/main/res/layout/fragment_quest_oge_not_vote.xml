@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".fragments.QuestFragment_oge_notVote" >
+    tools:context="com.memasyt.pocketHelper.fragments.QuestFragment_oge_notVote" >
 
     <ImageButton
         android:id="@+id/buttonBack_toLevels2"
@@ -30,6 +30,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="LABEL"
+            android:textColor="#D755452A"
             android:textSize="20sp" />
 
         <TextView
@@ -40,6 +41,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="text"
+            android:textColor="#D755452A"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -72,6 +74,7 @@
             android:minHeight="48dp"
             android:padding="10dp"
             android:scrollbarSize="4dp"
+            android:textColor="#D755452A"
             android:textSize="18sp" />
 
         <TextView

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".fragments.Statistic_last_task_oge_Fragment">
+    tools:context="com.memasyt.pocketHelper.fragments.Statistic_last_task_oge_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="Тренировка окончена"
+                android:textColor="#D755452A"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -43,6 +44,7 @@
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:text="Правильных\nответов"
+                    android:textColor="#D755452A"
                     android:textSize="16sp" />
 
                 <TextView
@@ -54,6 +56,7 @@
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
                     android:text="Неправильных\nответов"
+                    android:textColor="#D755452A"
                     android:textSize="16sp" />
             </LinearLayout>
 

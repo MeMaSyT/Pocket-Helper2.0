@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".Tasks_OGE_Activity">
+    tools:context="com.memasyt.pocketHelper.Tasks_OGE_Activity">
 
     <FrameLayout
         android:id="@+id/fragmentContainerView"

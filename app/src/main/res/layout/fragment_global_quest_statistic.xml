@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".fragments.GlobalQuestStatisticFragment" >
+    tools:context="com.memasyt.pocketHelper.fragments.GlobalQuestStatisticFragment" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +20,7 @@
             android:layout_margin="10dp"
             android:fontFamily="@font/dela_gothic_one"
             android:text="Экзамен окончен"
+            android:textColor="#D755452A"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -43,6 +44,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="1"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -66,6 +68,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="2"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -89,6 +92,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="3"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -112,6 +116,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="4"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -135,6 +140,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="5"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -158,6 +164,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="6"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -181,6 +188,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="7"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -204,6 +212,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="8"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -227,6 +236,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="9"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -250,6 +260,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="10"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -282,6 +293,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="11"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -306,6 +318,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="12"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -330,6 +343,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="13"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -354,6 +368,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="14"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -378,6 +393,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="15"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -402,6 +418,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="16"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -426,6 +443,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="17"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -450,6 +468,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="18"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -474,6 +493,7 @@
                     android:fontFamily="@font/dela_gothic_one"
                     android:gravity="center_horizontal"
                     android:text="19"
+                    android:textColor="#D755452A"
                     android:textSize="20sp" />
 
                 <ImageView
@@ -494,6 +514,7 @@
             android:fontFamily="@font/dela_gothic_one"
             android:paddingTop="20dp"
             android:text="Правельных ответов: 19"
+            android:textColor="#D755452A"
             android:textSize="16sp" />
 
         <TextView
@@ -504,7 +525,32 @@
             android:layout_margin="10dp"
             android:fontFamily="@font/dela_gothic_one"
             android:text="Неравельных ответов: 19"
+            android:textColor="#D755452A"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_yourAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:text="Ваша оценка"
+            android:textColor="#D755452A"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/yourAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/dela_gothic_one"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/green_true"
+            android:textSize="48sp" />
 
     </LinearLayout>
 
