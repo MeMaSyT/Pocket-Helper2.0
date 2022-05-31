@@ -74,7 +74,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/eometricBase_button2"
+                android:id="@+id/geometricBase_button2"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="10dp"

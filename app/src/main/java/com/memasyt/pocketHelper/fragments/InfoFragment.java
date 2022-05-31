@@ -17,7 +17,7 @@ import com.memasyt.pocketHelper.R;
 
 public class InfoFragment extends Fragment {
 
-    private TextView btn_statistic;
+    private TextView btn_statistic, btn_geometry;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -39,6 +39,8 @@ public class InfoFragment extends Fragment {
                         .commit();
             }
         });
+        btn_geometry = view.findViewById(R.id.geometricBase_button2);
+        btn_geometry.setOnClickListener(this::btn_geometryBase_click);
     }
 
     @Override

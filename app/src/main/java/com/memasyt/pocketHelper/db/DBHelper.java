@@ -14,7 +14,7 @@ import java.io.OutputStream;
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "oge_tasks_info_database.db";
     private static String DB_PATH = "";
-    private static final int DB_VERSION = 39;
+    private static final int DB_VERSION = 40;
 
     private SQLiteDatabase db;
     private final Context context;
